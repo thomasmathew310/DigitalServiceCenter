@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="digitalservicecenter.Login.Login"  %>
+
+<!DOCTYPE html>
+
+
+
+<html>
+<head runat="server">
+       <title>Signin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Animated Login Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free Web Designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='css/bootstrap.min.css' media='all' rel='stylesheet'/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/animate.min.css"/> 
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+     <div class="agileits">
+		
+		<div class="w3-agileits-info">
+			<form class='form animate-form' id='form2'  runat="server">
+				<p class="w3agileits">Login Here</p>
+				<div class='form-group has-feedback w3ls'>
+					<label class='control-label sr-only' for='username'>Username</label>
+                    <asp:TextBox ID="txtusername" runat="server" CssClass='form-control' placeholder='Username' ></asp:TextBox>
+<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="txtusername" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                    <%--					<input class='form-control' id='username' name='username' placeholder='Username' type='text'>--%>
+					<span class='glyphicon glyphicon-ok form-control-feedback'></span>
+				</div>
+                <%--<div class='form-group has-feedback wthree'>
+					<label class='control-label sr-only' for='email'>Email address</label> 
+					<input class='form-control' id='email' name='email' placeholder='Email address' type='text'><span class='glyphicon glyphicon-ok form-control-feedback'></span>
+				</div>--%>
+				<div class='form-group has-feedback agile'>
+					<label class='control-label sr-only' for='password'>Password</label>
+                    <asp:TextBox ID="txtpassword" runat="server" CssClass="form-control w3l" placeholder='Password' TextMode="Password"></asp:TextBox>
+<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="txtpassword" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                    <%--					<input class='form-control w3l' id='password' name='password' placeholder='Password' type='password'><span class='glyphicon glyphicon-ok form-control-feedback'></span>--%>
+				</div>
+				<div class='submit w3-agile'>
+                    <asp:Button ID="btnLogin" runat="server" Text="Sign in" CssClass='btn btn-lg' OnClick="btnLogin_Click" />
+                    <%--					<input class='btn btn-lg' type='submit' value='SUBMIT'>--%>
+				</div>
+                <a href="../Guest/frmclient.aspx" class="btn btn-lg">New User?</a>
+                   
+			</form>
+		</div>	
+	</div>
+
+
+   <%-- <form id="form1" runat="server">--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    <%--</form>--%>
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+	<script src='js/jquery.validate.min.js'></script>
+	<script src='js/formAnimation.js'></script>
+	<script src='js/shake.js'></script> 
+</body>
+</html>
